@@ -13,7 +13,7 @@ const FormEditProduct = () => {
     const getProductById = async () => {
       try {
         const response = await axios.get(
-          `http://sragen.cloud:5000/products/${id}`
+          `https://36.65.16.163:5000/products/${id}`
         );
         setName(response.data.name);
         setPrice(response.data.price);
@@ -29,7 +29,7 @@ const FormEditProduct = () => {
   const updateProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`http://sragen.cloud:5000/products/${id}`, {
+      await axios.patch(`https://36.65.16.163:5000/products/${id}`, {
         name: name,
         price: price,
       });

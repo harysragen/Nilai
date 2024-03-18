@@ -15,7 +15,7 @@ const FormEditUser = () => {
   useEffect(() => {
     const getUserById = async () => {
       try {
-        const response = await axios.get(`http://sragen.cloud:5000/users/${id}`);
+        const response = await axios.get(`https://36.65.16.163:5000/users/${id}`);
         setName(response.data.name);
         setEmail(response.data.email);
         setRole(response.data.role);
@@ -31,7 +31,7 @@ const FormEditUser = () => {
   const updateUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`http://sragen.cloud:5000/users/${id}`, {
+      await axios.patch(`https://36.65.16.163:5000/users/${id}`, {
         name: name,
         email: email,
         password: password,

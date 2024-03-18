@@ -19,7 +19,7 @@ const UserList = () => {
 
   const getUsers = async () => {
     const response = await axios.get(
-      `http://sragen.cloud:5000/users?search_query=${keyword}&page=${page}&limit=${limit}`
+      `https://36.65.16.163:5000/users?search_query=${keyword}&page=${page}&limit=${limit}`
     );
     setUsers(response.data.result);
     setPage(response.data.page);
@@ -46,7 +46,7 @@ const UserList = () => {
   };
 
   const deleteUser = async (userId) => {
-    await axios.delete(`http://sragen.cloud:5000/users/${userId}`);
+    await axios.delete(`https://36.65.16.163:5000/users/${userId}`);
     getUsers();
   };
 

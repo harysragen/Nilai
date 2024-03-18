@@ -14,7 +14,7 @@ const FormAddUser = () => {
   const saveUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://sragen.cloud:5000/users", {
+      await axios.post("https://36.65.16.163:5000/users", {
         name: name,
         email: email,
         password: password,

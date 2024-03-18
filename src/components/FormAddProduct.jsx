@@ -11,7 +11,7 @@ const FormAddProduct = () => {
   const saveProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://sragen.cloud:5000/products", {
+      await axios.post("https://36.65.16.163:5000/products", {
         name: name,
         price: price,
       });

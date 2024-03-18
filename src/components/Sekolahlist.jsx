@@ -19,7 +19,7 @@ const SekolahList = () => {
 
   const getSekolahs = async () => {
     const response = await axios.get(
-      `http://sragen.cloud:5000/sekolahs?search_query=${keyword}&page=${page}&limit=${limit}`
+      `https://36.65.16.163:5000/sekolahs?search_query=${keyword}&page=${page}&limit=${limit}`
     );
     setSekolahs(response.data.result);
     setPage(response.data.page);

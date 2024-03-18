@@ -19,7 +19,7 @@ const ProductList = () => {
 
   const getProducts = async () => {
     const response = await axios.get(
-      `http://sragen.cloud:5000/products?search_query=${keyword}&page=${page}&limit=${limit}`
+      `https://36.65.16.163:5000/products?search_query=${keyword}&page=${page}&limit=${limit}`
     );
     setProducts(response.data.result);
     setPage(response.data.page);
@@ -46,7 +46,7 @@ const ProductList = () => {
   };
 
   const deleteProduct = async (productId) => {
-    await axios.delete(`http://sragen.cloud:5000/products/${productId}`);
+    await axios.delete(`https://36.65.16.163:5000/products/${productId}`);
     getProducts();
   };
 
